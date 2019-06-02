@@ -3,6 +3,7 @@ package demo_TestCases;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -30,8 +31,18 @@ public class Test_001 {
 			// Actual title
 			String title = driver.getTitle();
 			System.out.println("Title is" + title);
-			driver.close();
+	
 			
+		
+			
+		}
+		
+		@AfterClass
+		
+		
+		public void close() throws Throwable
+		{
+			driver.quit();
 		}
 }
 
